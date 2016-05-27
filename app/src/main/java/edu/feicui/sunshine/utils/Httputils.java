@@ -20,7 +20,7 @@ import static edu.feicui.sunshine.utils.Jsonutils.getWeatherDataFromJson;
  */
 public class Httputils {
     private static final String TAG = "MainActivity";
-    public static final String APPKEY = "0fdb111d480794e6a0c6f1bdbfba2188";
+    public static final String APPKEY = "c154ac325c8703a8cbfd7867265c3954";
 
 
     /**
@@ -43,7 +43,6 @@ public class Httputils {
             urlConnection = (HttpURLConnection) url1.openConnection();//获取网络数据
             urlConnection.setRequestMethod("GET");//请求类型
             urlConnection.setConnectTimeout(5000);//超时时间
-            urlConnection.connect();
             InputStream in = urlConnection.getInputStream();
 
             reader = new BufferedReader(new InputStreamReader(in));

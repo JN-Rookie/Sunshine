@@ -93,7 +93,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        weather();
+        new Thread() {
+            @Override
+            public void run() {
+                String json = Httputils.getRequest("济南");
+                Jsonutils.getWeatherDataFromJson(json);
+                Jsonutils.getRealTime();
+                data = Jsonutils.getJsonWeather();
+                handler.sendEmptyMessage(MSG);
+            }
+        }.start();
     }
 
     private void weather() {
