@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/city"
+    tools:context="edu.feicui.sunshine.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:onClick="chooseCity"
+            android:id="@+id/iv_city"
+            android:src="@drawable/title_city"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <TextView
+
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:hint="济南"
+            android:layout_toRightOf="@+id/iv_city"
+            android:id="@+id/tv_city"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_today"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+        <TextView
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:text="晴"
+            android:id="@+id/tv_weather_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_tem_today"
+            android:layout_alignEnd="@+id/tv_wind_today"/>
+        <TextView
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:id="@+id/tv_tem_today"
+            android:text="温度"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:text="风向"
+            android:id="@+id/tv_wind_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_login"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:text="风力"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_power_today"
+            android:layout_alignTop="@+id/tv_wind_today"
+            android:layout_alignEnd="@+id/tv_tem_today"/>
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/tv_humidity"
+            android:textSize="16sp"
+            android:text="湿度"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tem_today"
+            android:layout_toStartOf="@+id/tv_power_today"/>
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/tv_login"
+            android:textSize="16sp"
+            android:text="点击查看具体天气信息"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+        <ImageView
+            android:src="@mipmap/weather_day2"
+            android:id="@+id/iv_weatherpic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="41dp"/>
+        <TextView
+            android:textColor="#FFFFFF"
+            android:text="最后更新时间"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_power_today"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView"/>
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/tv_datetime"
+            android:text="14:00:00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView"
+            android:layout_alignEnd="@+id/iv_weatherpic"/>
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_week"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+
+
+</LinearLayout>

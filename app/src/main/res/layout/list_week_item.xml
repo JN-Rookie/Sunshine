@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                >
+
+    <TextView
+        android:textColor="#FFFFFF"
+        android:id="@+id/tv_date_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="2016-8-35"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:textColor="#FFFFFF"
+        android:id="@+id/tv_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tv_date"
+        android:layout_below="@id/tv_date"
+        android:text="星期五"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:textColor="#FFFFFF"
+        android:id="@+id/tv_tem_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="温度17~25℃"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:textColor="#FFFFFF"
+        android:id="@+id/tv_weather_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="晴"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:textColor="#FFFFFF"
+        android:id="@+id/tv_wind_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="东风"
+        android:textSize="12sp"
+        android:layout_below="@+id/tv_tem_week"
+        android:layout_toLeftOf="@+id/tv_power_week"
+        android:paddingRight="20dp"
+        />
+
+    <TextView
+        android:textColor="#FFFFFF"
+        android:id="@+id/tv_power_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_wind_week"
+        android:layout_alignParentRight="true"
+        android:text="5级"
+        android:textSize="12sp"/>
+</RelativeLayout>
