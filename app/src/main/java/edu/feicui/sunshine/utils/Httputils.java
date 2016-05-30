@@ -16,13 +16,11 @@ import java.net.URL;
 import static edu.feicui.sunshine.utils.Jsonutils.getWeatherDataFromJson;
 
 /**
- * Created by Administrator on 2016/5/26.
+ * 获取网络天气数据的类
  */
 public class Httputils {
     private static final String TAG = "MainActivity";
     public static final String APPKEY = "c154ac325c8703a8cbfd7867265c3954";
-
-
     /**
      * 根据城市名获取天气数据
      */

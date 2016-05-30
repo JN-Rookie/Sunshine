@@ -15,7 +15,7 @@ import edu.feicui.sunshine.bean.WeatherInfoBean;
 import edu.feicui.sunshine.bean.WeekWeatherinfobean;
 
 /**
- * Created by Administrator on 2016/5/26.
+ * 解析已获取的天气数据的类
  */
 public class Jsonutils {
     private static final String TAG = "MainActivity";
@@ -214,5 +214,37 @@ public class Jsonutils {
         }
         PM25Bean bean = new PM25Bean(city_name, date_time, curPm, pm25, pm10, quality, des);
         return bean;
+    }
+
+    /**
+     * 根据获得星期的小写转换大写
+     */
+   public static String getWeek(String week) {
+       int week1= Integer.parseInt(week);
+            switch (week1) {
+                case 1:
+                    week = "一";
+                    break;
+                case 2:
+                    week = "二";
+                    break;
+                case 3:
+                    week = "三";
+                    break;
+                case 4:
+                    week = "四";
+                    break;
+                case 5:
+                    week = "五";
+                    break;
+                case 6:
+                    week= "六";
+                    break;
+                case 7:
+                    week = "日";
+                    break;
+            }
+
+        return week;
     }
 }

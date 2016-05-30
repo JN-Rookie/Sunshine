@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import edu.feicui.sunshine.bean.WeatherInfoBean;
 import edu.feicui.sunshine.bean.WeekWeatherinfobean;
 import edu.feicui.sunshine.utils.ImageUtils;
 import edu.feicui.sunshine.utils.Jsonutils;

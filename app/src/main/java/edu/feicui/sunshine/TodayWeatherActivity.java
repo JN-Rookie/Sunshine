@@ -2,6 +2,7 @@ package edu.feicui.sunshine;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -45,6 +46,7 @@ public class TodayWeatherActivity extends AppCompatActivity {
 
     private void initData() {
         WeatherInfoBean realTime = Jsonutils.getRealTime();
+        String week = Jsonutils.getWeek(realTime.week);
         tv_direct.setText(realTime.direct);//风向
         tv_power.setText(realTime.power);//风级
         tv_time.setText("更新时间" + realTime.time);//更新时间
@@ -53,7 +55,7 @@ public class TodayWeatherActivity extends AppCompatActivity {
         tv_temperature.setText("温度" + realTime.temperature + "℃");//温度
         tv_date.setText(realTime.date);//日期
         tv_city_name.setText(realTime.city_name);//地区
-        tv_week.setText("星期" + realTime.week);//星期
+        tv_week.setText("星期" + week);//星期
         tv_moon.setText("农历" + realTime.moon);//农历日期
         imageView.setImageResource(ImageUtils.getImageDay(realTime.id));
         PM25Bean bean =Jsonutils.getJsonPM25();
